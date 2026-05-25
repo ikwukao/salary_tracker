@@ -1,4 +1,11 @@
 class Employee:
     def __init__(self, name, level):
-        self.name = name
-        self.level = level
+        self._name = name
+        self._level = level
+
+    def __str__(self):
+        return f"{self._name}: {self._level}"
+
+
+charlie_brown = Employee('Charlie Brown', 'trainee')
+print(charlie_brown)
